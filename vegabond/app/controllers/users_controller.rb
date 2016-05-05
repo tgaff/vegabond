@@ -16,12 +16,15 @@ class UsersController < ApplicationController
   def new
 
     @user = User.new
-
+    render :new
   end
 
   def create
 
     @user = User.create(user_params)
+    login(@user)
+
+    redirect_to @user
   end
 
   def update
