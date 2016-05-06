@@ -19,6 +19,11 @@
      <% end %>
     </ul>
   </nav>
+  <% flash.each do |name, msg| %>
+  <p>
+    <small class="flash"> <%= name.capitalize %>: <%= msg %> </small>
+  </p>
+<% end %>
 <%= yield %>
 
 </body>
