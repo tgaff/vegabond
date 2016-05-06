@@ -21,8 +21,22 @@ body {
 .navbar.navbar-brand.navbar-right li {
   color: #ecf0f1
 }
+.btn-default {
+  background-color: #ecf0f1;
+}
 
 .profile-show {
   color: #ecf0f1
 
+}
+.form-control {
+  width: 50%;
+  opacity: 0.8;
+}
+.new-user-form {
+  width: 40%;
+  margin: auto;
+  color: #ecf0f1;
+  font-weight: bolder;
+  font-size: 1.3em;
 }
