@@ -1,0 +1,31 @@
+Sign in form
+<%= form_for @user do |f| %>
+ <div>
+   <%= f.text_field :first_name, placeholder: "First Name" %>
+ </div>
+ <div>
+   <%= f.text_field :last_name, placeholder: "Last Name" %>
+ </div>
+ <div>
+   <%= f.text_field :email, placeholder: "Email" %>
+ </div>
+ <div>
+   <%= f.password_field :password, placeholder: "Password" %>
+ </div>
+ <div>
+   <%= f.text_field :born_city, placeholder: "Born City" %>
+ </div>
+ <div>
+   <%= f.text_field :current_city, placeholder: "Current City" %>
+ </div>
+ <div>
+   <%= f.text_field :favorite_destination, placeholder: "Favorite Destination" %>
+ </div>
+ <div>
+   <%= f.text_area :bio, placeholder: "Bio" %>
+ </div>
+ <div>
+   <%= f.text_area :fav_travel_story, placeholder: "Favorite Travel Story" %>
+ </div>
+ <%= f.submit "Update" %>
+<% end %>
