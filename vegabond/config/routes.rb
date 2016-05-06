@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
  root to: "users#index"
 
  get "/users", to: "users#index", as: "users"
@@ -8,4 +9,8 @@ Rails.application.routes.draw do
  get "/users/:id/edit", to: "users#edit", as: "edit_user"
  patch "/users/:id", to: "users#update"
 
- end
+  # sessions routes by phill and adam
+  get "/login", to: "sessions#new"
+  get "/logout", to: "sessions#destroy"
+  post "/sessions", to: "sessions#create"
+end
