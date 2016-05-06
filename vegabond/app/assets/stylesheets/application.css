@@ -18,9 +18,7 @@ body {
   background-size: 100% auto;
 }
 
-.navbar.navbar-brand{
-  color: #ecf0f1
-}
+
 .btn-default {
   background-color: #ecf0f1;
 }
@@ -39,8 +37,25 @@ body {
   color: #ecf0f1;
   font-weight: bolder;
   font-size: 1.3em;
-
 }
-a {
-  color: #ecf0f1
+
+.jumbotron {
+  background-color: transparent;
+  color: #ecf0f1;
+  text-align: center;
+  size
+}
+.jumbotron h1 {
+  font-size: 200px;
+}
+.navbar {
+  background-color: rgb(102, 96, 102);
+  opacity: 0.5;
+}
+.navbar-brand{
+  color: #ecf0f1;
+}
+.navbar-nav  li a{
+  color: #ecf0f1;
+
 }
