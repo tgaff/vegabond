@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
  root to: "users#index"
-
+ # created by ilter and marcelo
  get "/users", to: "users#index", as: "users"
  get "/users/new", to: "users#new", as: "new_user"
  get "/users/:id", to: "users#show", as: "user"
@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"
+
+  # post routes created by adam and phill
+  get "/posts/:id", to: "posts#show", as: "post"
 end
