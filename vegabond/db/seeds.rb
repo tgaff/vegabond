@@ -1,5 +1,17 @@
-Post.destroy_all
+User.destroy_all
 puts "all previous seeds have been removed"
+
+adam = User.create({
+        first_name: "Adam",
+        last_name: "Reid",
+        born_city: "Mornington",
+        current_city: "San Francisco",
+        favorite_destination: "Japan",
+        bio: "From Australia. Living in San Francisco.",
+        fav_travel_story: "Pancakes for pants in Japan",
+        password_digest: "123",
+        email: "adam@mail.com"
+  })
 
 Post.create({title:"Taiwan", city:"Taipei", story:"邝楠何关是一个善良的人，
   从来没杀过任何有生命的东西。他有含银千件，他存放在棺材罐子。白蚂蚁，其中有在他的小区那么多，
