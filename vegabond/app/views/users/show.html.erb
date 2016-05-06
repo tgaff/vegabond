@@ -1,5 +1,10 @@
+<ul>
+  <%= @posts.each do |post| %>
+    <li><strong>Title:</strong><%= post.title %></li>
+    <li><strong>Author:</strong><%= post.author %></li>
+    <li><strong>Content:</strong><%= post.story %></li>
 
+  <% end %>
+</ul>
 
 <%= link_to "Edit User", edit_user_path(@user) %>
-
-<h1><%= @posts.title %></h1>

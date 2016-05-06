@@ -16,4 +16,5 @@ Rails.application.routes.draw do
 
   # post routes created by adam and phill
   get "/posts/:id", to: "posts#show", as: "post"
+  get "/posts/new", to: "posts#new", as: "new_post"
 end
