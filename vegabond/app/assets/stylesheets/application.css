@@ -18,6 +18,11 @@ body {
   background-size: 100% auto;
 }
 
-.navbar > ul {
-  color: white;
+.navbar.navbar-brand.navbar-right li {
+  color: #ecf0f1
+}
+
+.profile-show {
+  color: #ecf0f1
+
 }

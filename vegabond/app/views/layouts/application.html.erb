@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-inverse">
-    <a class="navbar-brand" href="#">Vagabond</a>
-    <ul class="nav navbar-nav">
+  <nav class="navbar">
+    <a class="navbar-brand" href="/">Vagabond</a>
+    <ul class="nav navbar-nav navbar-right">
      <% if current_user %>
        <li class="nav-item nav-link active"><%= link_to "Profile", user_path(current_user) %></li>
        <li><%= link_to "Log Out", logout_path %></li>
@@ -19,7 +19,7 @@
      <% end %>
     </ul>
   </nav>
-  <!-- <%= image_tag "sf.jpeg", :class => "cover" %> -->
+
 
 
 <%= yield %>
