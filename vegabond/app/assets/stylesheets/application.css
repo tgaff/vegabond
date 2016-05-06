@@ -18,7 +18,7 @@ body {
   background-size: 100% auto;
 }
 
-.navbar.navbar-brand.navbar-right li {
+.navbar.navbar-brand{
   color: #ecf0f1
 }
 .btn-default {
@@ -40,4 +40,7 @@ body {
   font-weight: bolder;
   font-size: 1.3em;
 
+}
+a {
+  color: #ecf0f1
 }
