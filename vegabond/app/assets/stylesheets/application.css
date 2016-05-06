@@ -49,13 +49,23 @@ body {
   font-size: 200px;
 }
 .navbar {
-  background-color: rgb(102, 96, 102);
-  opacity: 0.5;
+  /*background-color: rgb(102, 96, 102);*/
+  background-color: rgba(44, 62, 80,0.2);
+  color: #ecf0f1;
 }
 .navbar-brand{
   color: #ecf0f1;
 }
-.navbar-nav  li a{
+.navbar-brand:hover{
+  color: rgba(44, 62, 80,1);
+  background-color: #ecf0f1;
+  /*opacity: 1;*/
+}
+.navbar-nav li a {
   color: #ecf0f1;
-
+  right: +40px;
+}
+.navbar-nav  li a:hover{
+  color: rgba(44, 62, 80,1);
+  /*opacity: 1;*/
 }
