@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  # created by ilter, marcelo
 
+  before_action :logged_in?, only: [:show]
 
   def index
 
@@ -10,7 +12,7 @@ class UsersController < ApplicationController
   def show
 
     @user = User.find_by_id(params[:id])
-  
+
   end
 
   def new
@@ -40,6 +42,14 @@ class UsersController < ApplicationController
 
     redirect_to @user
 
+  end
+
+  # created by ilter, marcelo
+  def logged_in?
+    if session[:user_id] == nil
+      flash[:notice] = "Must be logged in to see this page"
+      redirect_to root_path
+    end
   end
 
   private

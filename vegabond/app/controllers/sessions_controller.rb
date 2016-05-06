@@ -25,6 +25,7 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+
   # private user_params method by phill and adam
   private
   def user_params
