@@ -9,7 +9,7 @@ adam = User.create({
         favorite_destination: "Japan",
         bio: "From Australia. Living in San Francisco.",
         fav_travel_story: "Pancakes for pants in Japan",
-        password_digest: "123",
+        password: "123",
         email: "adam@mail.com"
   })
 
