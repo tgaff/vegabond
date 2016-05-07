@@ -7,4 +7,6 @@
   </div>
   <%= button_to "Delete", @post,:class => "btn btn-danger", method: :delete %>
 
+  <%= link_to @post.city, city_path(@post.city_id) %>
+
 </div>

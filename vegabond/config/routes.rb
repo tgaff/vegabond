@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
  root to: "users#index"
+ #created by ilter
  # get '*path' => redirect('/') # to be enabled after developement
  # created by ilter and marcelo
  get "/users", to: "users#index", as: "users"
@@ -19,8 +20,12 @@ Rails.application.routes.draw do
   get "/posts/new", to: "posts#new", as: "new_post"
   get "/posts/:id", to: "posts#show", as: "post"
   post "/posts", to: "posts#create"
-  # post routes created by ilter
+  # post patch/delete routes created by ilter
   get "/posts/:id/edit", to: "posts#edit", as: "edit_post"
   patch "/posts/:id", to: "posts#update"
   delete "/posts/:id", to: "posts#destroy"
+
+  # city controller created by phill
+  get "/cities/:id", to: "cities#show", as: "city"
+
 end
