@@ -1,3 +1,5 @@
+<div class=".col-md-4 col-md-offset-2">
+
 <h1 class="profile-show" > <%= @user.first_name %> </h1>
 
 <h5 class="profile-show">From: <%= @user.current_city %> </h5>
@@ -5,3 +7,4 @@
 <p class="profile-show">Join date: <%= @user.created_at.strftime("%m/%d/%Y") %> </p>
 
 <%= link_to "Edit User", edit_user_path(@user) %>
+</div>

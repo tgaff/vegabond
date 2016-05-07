@@ -29,6 +29,9 @@ color: #ecf0f1;
 .btn-default {
   background-color: #ecf0f1;
 }
+.btn-default:hover {
+  border-color: #ecf0f1;
+}
 
 .profile-show {
   color: #ecf0f1
@@ -83,4 +86,8 @@ color: #ecf0f1;
 .navbar-nav  li a:hover{
   color: rgba(44, 62, 80,1);
   /*opacity: 1;*/
+}
+.login-text {
+  color: #ecf0f1;
+  text-align: center;
 }
