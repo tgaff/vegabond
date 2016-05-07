@@ -35,6 +35,14 @@ class PostsController < ApplicationController
     redirect_to @post
   end
 
+  def destroy
+    @post = Post.find_by_id(params[:id])
+
+    @post.destroy
+    redirect_to current_user
+
+  end
+
   def logged_in?
     if session[:user_id] == nil
       flash[:notice] = "Must be logged in to see this page"

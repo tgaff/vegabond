@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   # post routes created by ilter
   get "/posts/:id/edit", to: "posts#edit", as: "edit_post"
   patch "/posts/:id", to: "posts#update"
+  delete "/posts/:id", to: "posts#destroy"
 end
