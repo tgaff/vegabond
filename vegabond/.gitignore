@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+.env
+S3_BUCKET=vegabond
+S3_PUBLIC_KEY=AKIAJ7B2T7X3ZF24YPGQ
+S3_SECRET=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
