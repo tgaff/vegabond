@@ -21,7 +21,7 @@
   </nav>
   <% flash.each do |name, msg| %>
   <p>
-    <small class="flash"> <%= name.capitalize %>: <%= msg %> </small>
+    <small class="alert alert-info flash"> <%= name.capitalize %>: <%= msg %> </small>
   </p>
 <% end %>
 <%= yield %>

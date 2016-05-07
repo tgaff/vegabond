@@ -1,7 +1,7 @@
 /*
- *= require bootstrap.min.css
- *= require_tree .
+*= require bootstrap.min
  *= require_self
+ *= require_tree .
  */
 
 body {
@@ -17,16 +17,10 @@ body {
 
   background-size: 100% auto;
 }
-.flash {
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+.alert-info {
+background-color: rgba(44, 62, 80,0.2);
+border-style: hidden;
+color: #ecf0f1;
 }
 
 
@@ -54,7 +48,6 @@ body {
   background-color: transparent;
   color: #ecf0f1;
   text-align: center;
-  size
 }
 .jumbotron h1 {
   font-size: 200px;
