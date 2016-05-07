@@ -1,7 +1,8 @@
 <div class="col-md-10 col-md-offset-2">
 
   <div class="new-user-form">
-    <p >
+    <p>
+      <%= f.file_field :avatar %>
     </p>
     <%= form_for @user, :html => { :class => "form-group" } do |f| %>
      <div>
