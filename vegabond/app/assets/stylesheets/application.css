@@ -22,8 +22,10 @@ background-color: rgba(44, 62, 80,0.2);
 border-style: hidden;
 color: #ecf0f1;
 }
-
-
+.flash {
+  margin: auto;
+  width: 100%;
+}
 .btn-default {
   background-color: #ecf0f1;
 }
