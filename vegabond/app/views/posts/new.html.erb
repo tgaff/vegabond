@@ -1,0 +1,21 @@
+<h1>New Post</h1>
+
+<%= form_for @post do |f| %>
+
+    <div class="">
+        <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+
+    <div class="">
+        <%= f.text_field :city, placeholder: "City" %>
+    </div>
+
+    <div class="">
+        <%= f.text_area :story, placeholder: "Your Story" %>
+    </div>
+
+    <div class="">
+        <%= f.text_field :author, placeholder: "Author" %>
+    </div>
+    <%= f.submit "Submit" %>
+<% end %>
