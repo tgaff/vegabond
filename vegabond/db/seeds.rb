@@ -1,4 +1,5 @@
 User.destroy_all
+
 puts "all previous seeds have been removed"
 
 adam = User.create({
@@ -30,10 +31,13 @@ surfing equipment.", author:"Wavey Clavey"})
 three = Post.create({title:"The bar", city:"Berlin", story:"Went to the bar, got kicked out", author:"Ash"})
 
 four = Post.create({title:"The restaurant", city:"Oakland", story:"Best soup in the world", author:"Ash"})
-
+sanfrancisco = City.create({name: "San Francisco"})
 adam.posts << one
 adam.posts << two
 adam.posts << three
 adam.posts << four
+sanfrancisco.posts << four
 
+
+p sanfrancisco
 puts "new seeds have been plotted"
