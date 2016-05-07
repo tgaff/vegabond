@@ -1,13 +1,12 @@
 <div class="col-md-10 col-md-offset-2">
 
   <div class="new-user-form">
-    <p>
-
+    <p >
     </p>
-    <%= form_for @user, :html => { :class => "form-group" } do |f| %>
-      <div>
-        <%= f.file_field :avatar %>
-      </div>
+    <%= form_for @user,multipart: true, :html => { :class => "form-group" } do |f| %>
+     <div>
+       <%= f.file_field :avatar %>
+     </div>
      <div>
        <%= f.label :first_name %>
        <%= f.text_field :first_name,:class=> "form-control" %>
