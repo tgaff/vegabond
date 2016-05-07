@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   # post routes created by adam and phill
   get "/posts/new", to: "posts#new", as: "new_post"
   get "/posts/:id", to: "posts#show", as: "post"
-
   post "/posts", to: "posts#create"
+  # post routes created by ilter
+  get "/posts/:id/edit", to: "posts#edit", as: "edit_post"
+  patch "/posts/:id", to: "posts#update"
 end
