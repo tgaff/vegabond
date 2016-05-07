@@ -19,4 +19,8 @@ Rails.application.routes.draw do
   get "/posts/:id", to: "posts#show", as: "post"
 
   post "/posts", to: "posts#create"
+
+
+  # city controller created by phill
+  get "/cities/:id", to: "cities#show", as: "city"
 end
