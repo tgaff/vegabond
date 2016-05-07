@@ -38,12 +38,18 @@ color: #ecf0f1;
   width: 50%;
   opacity: 0.8;
 }
+
 .new-user-form {
   width: 40%;
   margin: auto;
   color: #ecf0f1;
   font-weight: bolder;
   font-size: 1.3em;
+}
+.new-user-form .btn-default {
+  width: 50%;
+  background-color: rgba(44, 62, 80,0.2);
+  color: #ecf0f1;
 }
 
 .jumbotron {
