@@ -10,9 +10,9 @@
 
 <ul>
   <% @posts.each do |post| %>
-    <li class="profile-show"><strong>Title:</strong><%= post.title %></li>
-    <li class="profile-show"><strong>Author:</strong><%= post.author %></li>
-    <li class="profile-show"><strong>Content:</strong><%= post.story %></li>
+    <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, post_path(post) %></h3>
+    <h5 class="profile-show"><strong>Author:</strong><%= post.author %></h5>
+    <p class="profile-show"><strong>Content:</strong><%= post.story %></p>
 
   <% end %>
 </ul>
