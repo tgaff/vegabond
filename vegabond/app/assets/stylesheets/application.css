@@ -1,7 +1,7 @@
 /*
- *= require bootstrap.min.css
- *= require_tree .
+*= require bootstrap.min
  *= require_self
+ *= require_tree .
  */
 
 body {
@@ -17,7 +17,77 @@ body {
 
   background-size: 100% auto;
 }
+.alert-info {
+background-color: rgba(44, 62, 80,0.2);
+border-style: hidden;
+color: #ecf0f1;
+}
+.flash {
+  margin: auto;
+  width: 100%;
+}
+.btn-default {
+  background-color: #ecf0f1;
+}
+.btn-default:hover {
+  border-color: #ecf0f1;
+}
 
-.navbar ul {
-  color: white;
+.profile-show {
+  color: #ecf0f1
+
+}
+.form-control {
+  width: 50%;
+  opacity: 0.8;
+}
+
+.new-user-form {
+  width: 40%;
+  margin: auto;
+  color: #ecf0f1;
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+.new-user-form .btn-default {
+  width: 50%;
+  background-color: rgba(44, 62, 80,0.2);
+  color: #ecf0f1;
+}
+
+.jumbotron {
+  background-color: transparent;
+  color: #ecf0f1;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 200px;
+  webkit-box-reflect: below 0px -webkit-gradient(linear,
+     left top, left bottom, from(transparent),
+     color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+}
+.navbar {
+  /*background-color: rgb(102, 96, 102);*/
+  background-color: rgba(44, 62, 80,0.2);
+  color: #ecf0f1;
+}
+.navbar-brand{
+  color: #ecf0f1;
+}
+.navbar-brand:hover{
+  color: rgba(44, 62, 80,1);
+  background-color: #ecf0f1;
+  /*opacity: 1;*/
+}
+.navbar-nav li a {
+  color: #ecf0f1;
+  right: +40px;
+}
+.navbar-nav  li a:hover{
+  color: rgba(44, 62, 80,1);
+  /*opacity: 1;*/
+}
+.login-text {
+  color: #ecf0f1;
+  text-align: center;
 }

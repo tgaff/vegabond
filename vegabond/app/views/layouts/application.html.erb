@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vegabond</title>
+  <title>Vagabond</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-inverse">
-    <a class="navbar-brand" href="#">Vagabond</a>
-    <ul class="nav navbar-nav">
+  <nav class="navbar">
+    <a class="navbar-brand" href="/">Vagabond</a>
+    <ul class="nav navbar-nav navbar-right">
      <% if current_user %>
        <li class="nav-item nav-link active"><%= link_to "Profile", user_path(current_user) %></li>
        <li><%= link_to "Log Out", logout_path %></li>
@@ -19,9 +19,11 @@
      <% end %>
     </ul>
   </nav>
-  <!-- <%= image_tag "sf.jpeg", :class => "cover" %> -->
-
-
+  <% flash.each do |name, msg| %>
+  <p>
+    <small class="alert alert-info"> <%= name.capitalize %>: <%= msg %> </small>
+  </p>
+<% end %>
 <%= yield %>
 
 </body>

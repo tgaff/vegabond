@@ -1,31 +1,47 @@
-Sign in form
-<%= form_for @user do |f| %>
- <div>
-   <%= f.text_field :first_name, placeholder: "First Name" %>
- </div>
- <div>
-   <%= f.text_field :last_name, placeholder: "Last Name" %>
- </div>
- <div>
-   <%= f.text_field :email, placeholder: "Email" %>
- </div>
- <div>
-   <%= f.password_field :password, placeholder: "Password" %>
- </div>
- <div>
-   <%= f.text_field :born_city, placeholder: "Born City" %>
- </div>
- <div>
-   <%= f.text_field :current_city, placeholder: "Current City" %>
- </div>
- <div>
-   <%= f.text_field :favorite_destination, placeholder: "Favorite Destination" %>
- </div>
- <div>
-   <%= f.text_area :bio, placeholder: "Bio" %>
- </div>
- <div>
-   <%= f.text_area :fav_travel_story, placeholder: "Favorite Travel Story" %>
- </div>
- <%= f.submit "Sign Up" %>
-<% end %>
+<div class="col-md-10 col-md-offset-2">
+
+  <div class="new-user-form">
+    <p >
+    </p>
+    <%= form_for @user, :html => { :class => "form-group" } do |f| %>
+     <div>
+       <%= f.label :first_name %>
+       <%= f.text_field :first_name,:class=> "form-control" %>
+     </div>
+     <div>
+       <%= f.label :last_name %>
+       <%= f.text_field :last_name,:class=> "form-control" %>
+     </div>
+     <div>
+       <%= f.label :email %>
+       <%= f.text_field :email,:class=> "form-control" %>
+     </div>
+     <div>
+       <%= f.label :password %>
+       <%= f.password_field :password,:class=> "form-control" %>
+     </div>
+     <div>
+       <%= f.label :born_city %>
+       <%= f.text_field :born_city,:class=> "form-control" %>
+     </div>
+     <div>
+       <%= f.label :current_city %>
+       <%= f.text_field :current_city,:class=> "form-control" %>
+     </div>
+     <div>
+       <%= f.label :favorite_destination %>
+       <%= f.text_field :favorite_destination,:class=> "form-control"%>
+     </div>
+     <div>
+       <%= f.label :bio %>
+       <%= f.text_area :bio,:class=> "form-control"%>
+     </div>
+     <div>
+       <%= f.label :fav_travel_story %>
+       <%= f.text_area :fav_travel_story,:class=> "form-control"%><br>
+     </div>
+     <%= f.submit "Sign Up", :class=> "btn btn-default" %>
+    <% end %>
+
+  </div>
+</div>
