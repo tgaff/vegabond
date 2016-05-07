@@ -1,3 +1,7 @@
 <h1>test city show page</h1>
 
 <strong><%= @city.name %></strong>
+
+<% @posts.each do |post| %>
+  <%= post.title %>
+<% end %>
