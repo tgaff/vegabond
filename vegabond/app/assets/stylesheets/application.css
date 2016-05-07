@@ -74,6 +74,13 @@ color: #ecf0f1;
 .navbar-brand{
   color: #ecf0f1;
 }
+.glyphicon{
+  color: #ecf0f1;
+  font-size: 2em;
+}
+.glyphicon:hover{
+  color: rgba(44, 62, 80,1);
+}
 .navbar-brand:hover{
   color: rgba(44, 62, 80,1);
   background-color: #ecf0f1;
@@ -87,7 +94,7 @@ color: #ecf0f1;
   color: rgba(44, 62, 80,1);
   /*opacity: 1;*/
 }
-.login-text {
+.guide-text {
   color: #ecf0f1;
   text-align: center;
 }

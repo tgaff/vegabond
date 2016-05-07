@@ -1,21 +1,28 @@
-<h1>New Post</h1>
+<h3 class="guide-text">New Post</h3>
+  <div class="col-md-10 col-md-offset-2">
+    <div class="new-user-form">
+      <%= form_for @post, :html => { :class => "form-group" } do |f| %>
 
-<%= form_for @post do |f| %>
+          <div class="">
+              <%= f.label :title %>
+              <%= f.text_field :title, :class=> "form-control" %>
+          </div>
 
-    <div class="">
-        <%= f.text_field :title, placeholder: "Title" %>
+          <div class="">
+              <%= f.label :city %>
+              <%= f.text_field :city, :class=> "form-control" %>
+          </div>
+
+          <div class="">
+              <%= f.label :story %>
+              <%= f.text_area :story, :class=> "form-control" %>
+          </div>
+
+          <div class="">
+              <%= f.label :author %>
+              <%= f.text_field :author, :class=> "form-control" %><br>
+          </div>
+          <%= f.submit "Submit", :class=> "btn btn-default"  %>
+      <% end %>
     </div>
-
-    <div class="">
-        <%= f.text_field :city, placeholder: "City" %>
-    </div>
-
-    <div class="">
-        <%= f.text_area :story, placeholder: "Your Story" %>
-    </div>
-
-    <div class="">
-        <%= f.text_field :author, placeholder: "Author" %>
-    </div>
-    <%= f.submit "Submit" %>
-<% end %>
+  </div>

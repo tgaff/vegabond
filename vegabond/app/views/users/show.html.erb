@@ -6,15 +6,16 @@
 <h5 class="profile-show">From: <%= @user.current_city %> </h5>
 
 <p class="profile-show">Join date: <%= @user.created_at.strftime("%m/%d/%Y") %> </p>
+
+
 <ul>
-  <%= @posts.each do |post| %>
-    <li><strong>Title:</strong><%= post.title %></li>
-    <li><strong>Author:</strong><%= post.author %></li>
-    <li><strong>Content:</strong><%= post.story %></li>
+  <% @posts.each do |post| %>
+    <li class="profile-show"><strong>Title:</strong><%= post.title %></li>
+    <li class="profile-show"><strong>Author:</strong><%= post.author %></li>
+    <li class="profile-show"><strong>Content:</strong><%= post.story %></li>
 
   <% end %>
 </ul>
 
 
-<%= link_to "Edit User", edit_user_path(@user) %>
 </div>
