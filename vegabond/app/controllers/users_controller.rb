@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id])
+    @user = User.find_by_id(current_user)
+    @city = City.find_by_id(params[:id])
     @posts = @user.posts
     render :show
   end
