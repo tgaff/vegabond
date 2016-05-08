@@ -16,14 +16,27 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"
 
+
+  ## NOT NESTED ##
   # post routes created by adam and phill
-  get "/posts/new", to: "posts#new", as: "new_post"
-  get "/posts/:id", to: "posts#show", as: "post"
-  post "/posts", to: "posts#create"
-  # post patch/delete routes created by ilter
-  get "/posts/:id/edit", to: "posts#edit", as: "edit_post"
-  patch "/posts/:id", to: "posts#update"
-  delete "/posts/:id", to: "posts#destroy"
+  # get "/posts/new", to: "posts#new", as: "new_post"
+  # get "/posts/:id", to: "posts#show", as: "post"
+  # post "/posts", to: "posts#create"
+  # # post patch/delete routes created by ilter
+  # get "/posts/:id/edit", to: "posts#edit", as: "edit_post"
+  # patch "/posts/:id", to: "posts#update"
+  # delete "/posts/:id", to: "posts#destroy"
+ ## NESTED ##
+
+
+  get "/cities/:city_id/posts/new", to: "posts#new", as: "new_post"
+  get "/cities/:city_id/posts/:id", to: "posts#show", as: "post"
+  post "/cities/:city_id/posts", to: "posts#create"
+  # post routes created by ilter
+  get "/cities/:city_id/posts/:id/edit", to: "posts#edit", as: "edit_post"
+  delete "/cities/:city_id/posts/:id", to: "posts#destroy"
+  patch "/cities/:city_id/posts/:id", to: "posts#update"
+
 
   # city controller created by phill
   get "/cities/:id", to: "cities#show", as: "city"

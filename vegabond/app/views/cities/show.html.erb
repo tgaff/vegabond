@@ -1,7 +1,14 @@
-<h1><strong><%= @city.name %></strong></h1>
-<br>
+
+<div class=".col-md-4 col-md-offset-2">
+
+  <h1 class="profile-show"><strong><%= @city.name %></strong></h1>
+  <br>
 
 
-<% @posts.each do |post| %>
-  <p><%= link_to post.title, post_path(post) %><p>
-<% end %>
+  <% @posts.each do |post| %>
+    <p><%= link_to post.title, post_path(post) %><p>
+    <%= button_to "Delete", @post,:class => "btn btn-danger", method: :delete %>
+  <% end %>
+
+
+</div>
