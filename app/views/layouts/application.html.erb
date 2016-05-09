@@ -12,7 +12,12 @@
     <ul class="nav navbar-nav navbar-right">
      <% if current_user %>
        <!-- <li><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_user_path(current_user) %></li> -->
-       <li><a href="http://localhost:3000/cities/1">San Francisco</a></li>
+       <li class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cities</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" id="city" href="/cities/1">San Francisco</a> <br>
+          <a class="dropdown-item" id="city" href="#">Valdivia</a>
+        </div>
        <li class="nav-item nav-link active"><%= link_to "Profile", user_path(current_user) %></li>
        <li><%= link_to "Log Out", logout_path %></li>
      <% else %>

@@ -22,9 +22,7 @@
   background-size: 100% 350px;
   background-position: top;
 }
-div {
 
-}
 .profile-info{
   position: fixed;
   text-align: left;
@@ -133,4 +131,7 @@ div {
   border:1px solid white;
   background-color: white;
 
+}
+#city {
+  color: rgba(44, 62, 80,1);
 }
