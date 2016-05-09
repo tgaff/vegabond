@@ -1,16 +1,16 @@
 <div class="col-md-10 col-md-offset-2">
 
   <div class="new-user-form">
+    <% if @user.errors.any? %>
+    <div class="error_explanation">
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <%flash[:notice] = msg %>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
     <%= form_for @user,multipart: true, :html => { :class => "form-group" } do |f| %>
-      <% if @user.errors.any? %>
-      <div class="error_explanation">
-        <ul>
-          <% @user.errors.full_messages.each do |msg| %>
-           <%flash[:notice] = msg %>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
       <div>
        <%= f.file_field :avatar %>
      </div>
