@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])
   end
-
+ # added by Phil and Ilter
   validates :email, format: /@/, uniqueness: true, presence: true
   validates :password, presence: true
   validates :first_name, presence: true

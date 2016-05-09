@@ -3,7 +3,6 @@
 
   <h1 class="profile-show"><strong><%= @city.name %></strong></h1>
   <br>
-
   <% if current_user %>
     <%= button_to "New Post", new_city_post_path(@city), :method => :get, :class => "btn btn-info" %><br><br>
     <% @city.posts.each do |post| %>
@@ -16,7 +15,4 @@
       <p><strong><%= link_to post.title, city_post_path({id: post.id, city_id: @city[:id]}) %></strong><p>
     <% end %>
   <% end %>
-
-
-
 </div>

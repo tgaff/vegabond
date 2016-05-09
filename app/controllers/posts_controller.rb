@@ -32,8 +32,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by_id(params[:id])
-    @city = City.find_by_id(params[:city_id])
+    if logged_in? == nil
+      flash[:alert]  = "You must be logged in to edit posts"
+    else
+      @post = Post.find_by_id(params[:id])
+      @city = City.find_by_id(params[:city_id])
+    end
   end
 
   def update
@@ -41,19 +45,25 @@ class PostsController < ApplicationController
     user_id = current_user[:id]
     post = Post.find_by_id(params[:id])
     post[:user_id] = user_id
-    if post.update(post_params)
+    if user_id == post[:user_id]
+      post.update(post_params)
       redirect_to city_path(city)
     else
+      flash.now[:notice] = "You can not edit other user posts"
       redirect_to edit_post_path
     end
   end
 
   def destroy
     post = Post.find_by_id(params[:id])
-    post.destroy
-    city = City.find_by_id(params[:city_id])
-    redirect_to city_path(city)
-
+    if current_user.id == post[:user_id]
+      post.destroy
+      city = City.find_by_id(params[:city_id])
+      redirect_to city_path(city)
+    else
+      flash.now[:notice] = "You can not delete other user posts"
+      redirect_to city_path(city)
+    end
   end
 
   def logged_in?
