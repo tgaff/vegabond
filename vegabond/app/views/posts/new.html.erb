@@ -1,7 +1,7 @@
 <h3 class="guide-text">New Post</h3>
   <div class="col-md-10 col-md-offset-2">
     <div class="new-user-form">
-      <%= form_for @post, :html => { :class => "form-group" } do |f| %>
+      <%= form_for [@city, @post], :html => { :class => "form-group" } do |f| %>
 
           <div class="">
               <%= f.label :title %>

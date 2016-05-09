@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    render :new
   end
 
   def create
@@ -20,9 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(current_user)
-    @city = City.find_by_id(params[:id])
     @posts = @user.posts
-    render :show
   end
 
   def edit

@@ -2,11 +2,11 @@
 
   <div class="profile-show">
     <h1><%= @post.title %></h1>
-    <%= @post.city%> <br><br><br>
+    <%= @post.city%> <br><br>
     <p><%= @post.story%></p>
+    <p><strong><%= @post.author%></strong></p>
   </div>
-  <%= button_to "Delete", @post,:class => "btn btn-danger", method: :delete %>
-
+  <%= button_to "Delete", "/cities/#{@city.id}/posts/#{@post.id}",:class => "btn btn-danger", method: :delete %>
 
 
 </div>

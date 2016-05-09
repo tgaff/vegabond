@@ -17,7 +17,7 @@
   <ul>
 
       <% @posts.each do |post| %>
-        <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, post_path(post) %></h3>
+        <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, city_post_path([1],post) %></h3>
         <h5 class="profile-show"><strong>Author:</strong><%= post.author %></h5>
         <p class="profile-show"><strong>Content:</strong><%= post.story %></p>
       <% end %>
