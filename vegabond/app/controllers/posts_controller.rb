@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     user = User.find_by_id(current_user)
-    city = City.find_by_id(params[:id])
+    # city = City.find_by_id(params[:id])
     new_post = Post.new(post_params)
     new_post.user_id = current_user.id
 
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_id(params[:id])
-    @city = City.find_by_id(params[:id])
+    # @city = City.find_by_id(params[:id])
     render :show
   end
 
