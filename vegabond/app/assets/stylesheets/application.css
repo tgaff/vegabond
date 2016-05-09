@@ -21,17 +21,22 @@
   background: url("background.jpeg") no-repeat center center fixed;
   background-size: 100% 350px;
   background-position: top;
+}
+div {
 
 }
 .profile-info{
-  text-align: center;
-  top: -300px;
-
+  position: fixed;
+  text-align: left;
+  width: 40%;
+  left: 20%;
+  top: 10%;
+  color: #ecf0f1;
 }
 .alert-info {
-background-color: rgba(44, 62, 80,0.2);
-border-style: hidden;
-color: #ecf0f1;
+  background-color: rgba(44, 62, 80,0.2);
+  border-style: hidden;
+  color: #ecf0f1;
 }
 .flash {
   margin: auto;
@@ -44,9 +49,10 @@ color: #ecf0f1;
   border-color: #ecf0f1;
 }
 
-.profile-show {
-  color: #ecf0f1
-
+.profile-content {
+  position: absolute;;
+  color: rgba(44, 62, 80,1);
+  top: 44%;
 }
 .form-control {
   width: 50%;
@@ -110,6 +116,7 @@ color: #ecf0f1;
   text-align: center;
 }
 .user_image {
+  position: relative;;
   padding: 12px;
   width: 250px;
   height: 250px;

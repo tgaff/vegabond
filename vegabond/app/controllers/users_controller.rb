@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     login(@user)
     redirect_to @user
+
   end
 
   def show
