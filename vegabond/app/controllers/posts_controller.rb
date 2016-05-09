@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     @post = Post.new
     city_id = params[:city_id]
     @city = City.find_by(id: city_id)
+    @full_background = true
   end
 
   def create

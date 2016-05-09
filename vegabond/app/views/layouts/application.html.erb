@@ -6,12 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= @full_background ? 'homepage' : 'page' %>">
   <nav class="navbar">
     <a class="navbar-brand" href="/">Vagabond</a>
     <ul class="nav navbar-nav navbar-right">
      <% if current_user %>
-       <li><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_user_path(current_user) %></li>
+       <!-- <li><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_user_path(current_user) %></li> -->
        <li class="nav-item nav-link active"><%= link_to "Profile", user_path(current_user) %></li>
        <li><%= link_to "Log Out", logout_path %></li>
      <% else %>
