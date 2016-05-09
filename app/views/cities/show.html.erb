@@ -8,7 +8,7 @@
     <% @city.posts.each do |post| %>
       <p><strong><%= link_to post.title, city_post_path({id: post.id, city_id: @city[:id]}) %></strong><p>
       <% if current_user[:id] == post[:user_id] %>
-      <%= button_to "Delete", "/cities/#{@city.id}/posts/#{post.id}",:class => "btn btn-danger", method: :delete,data: { confirm: "You sure?" } %>
+      <%= button_to "Delete", "/cities/#{@city.id}/posts/#{post.id}",:class => "btn btn-danger", method: :delete,data: { confirm: "Are you sure?" } %>
       <%= button_to "Edit", edit_city_post_path(@city[:id], post[:id]), method: :get, :class => "btn btn-success" %><br><br>
       <% end %>
     <% end %>

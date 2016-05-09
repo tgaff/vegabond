@@ -20,10 +20,9 @@ class User < ActiveRecord::Base
     @user.try(:authenticate, params[:password])
   end
  # added by Phil and Ilter
-  validates :email, format: /@/, uniqueness: true, presence: true
   validates :password, presence: true
-  validates :first_name, presence: true
+  validates :email, format: { with: /@/, uniqueness: true, presence: true}
   validates :last_name, presence: true
-
+  validates :first_name, presence: true
 
 end
