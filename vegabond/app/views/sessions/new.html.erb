@@ -1,15 +1,16 @@
-<h1>Login</h1>
-
-<div class="new-user-form">
-  <%= form_for @user, :html => { :class => "form-group" },  url: "/sessions", method: "post" do |f| %>
-    <div>
-      <%= f.label :email %>
-      <%= f.text_field :email, :class=> "form-control" %>
-    </div>
-    <div>
-      <%= f.label :password %>
-      <%= f.password_field :password,:class=> "form-control" %><br>
-    </div>
-    <%= f.submit "Sign In", :class=> "btn btn-default btn-block" %>
-  <% end %>
+<h3 class="guide-text">Login</h3>
+<div class="col-md-10 col-md-offset-2">
+  <div class="new-user-form">
+    <%= form_for @user, :html => { :class => "form-group" },  url: "/sessions", method: "post" do |f| %>
+      <div>
+        <%= f.label :email %>
+        <%= f.text_field :email, :class=> "form-control" %>
+      </div>
+      <div>
+        <%= f.label :password %>
+        <%= f.password_field :password,:class=> "form-control" %><br>
+      </div>
+      <%= f.submit "Sign In", :class=> "btn btn-default" %>
+    <% end %>
+  </div>
 </div>

@@ -1,7 +1,28 @@
+
+<div class=".col-md-4 col-md-offset-2">
+
+  <div class="user_image">
+    <%= image_tag @user.avatar.url (:medium)%>
+  </div>
+
+
 <h1 class="profile-show" > <%= @user.first_name %> </h1>
 
-<h5 class="profile-show">From: <%= @user.current_city %> </h5>
 
-<p class="profile-show">Join date: <%= @user.created_at.strftime("%m/%d/%Y") %> </p>
+  <h5 class="profile-show">From: <%= @user.current_city %> </h5>
 
-<%= link_to "Edit User", edit_user_path(@user) %>
+  <p class="profile-show">Join date: <%= @user.created_at.strftime("%m/%d/%Y") %> </p>
+
+
+  <ul>
+
+      <% @posts.each do |post| %>
+        <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, post_path(post) %></h3>
+        <h5 class="profile-show"><strong>Author:</strong><%= post.author %></h5>
+        <p class="profile-show"><strong>Content:</strong><%= post.story %></p>
+      <% end %>
+
+  </ul>
+
+
+</div>

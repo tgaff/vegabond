@@ -4,44 +4,35 @@ class UsersController < ApplicationController
   before_action :logged_in?, only: [:show]
 
   def index
-
     @users = User.all
-
-  end
-
-  def show
-
-    @user = User.find_by_id(params[:id])
-
   end
 
   def new
-
     @user = User.new
     render :new
   end
 
   def create
-
     @user = User.create(user_params)
     login(@user)
-
     redirect_to @user
+  end
+
+  def show
+    @user = User.find_by_id(current_user)
+    @city = City.find_by_id(params[:id])
+    @posts = @user.posts
+    render :show
   end
 
   def edit
-
     @user = User.find_by_id(params[:id])
-
   end
 
   def update
-
     @user = User.find_by_id(params[:id])
     @user.update_attributes(user_params)
-
     redirect_to @user
-
   end
 
   # created by ilter, marcelo
@@ -55,9 +46,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-
-    params.require(:user).permit(:first_name,:last_name,:born_city,:current_city,
+    params.require(:user).permit(:avatar,:first_name,:last_name,:born_city,:current_city,
     :favorite_destination,:bio,:fav_travel_story,:password,:email)
-
   end
 end

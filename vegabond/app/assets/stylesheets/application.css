@@ -5,7 +5,7 @@
  */
 
 body {
-  background: url("sf.jpeg") no-repeat center center fixed;
+  background: url("background.jpeg") no-repeat center center fixed;
 
   -webkit-background-size: 100% auto;
 
@@ -30,6 +30,9 @@ color: #ecf0f1;
 .btn-default {
   background-color: #ecf0f1;
 }
+.btn-default:hover {
+  border-color: #ecf0f1;
+}
 
 .profile-show {
   color: #ecf0f1
@@ -39,12 +42,18 @@ color: #ecf0f1;
   width: 50%;
   opacity: 0.8;
 }
+
 .new-user-form {
   width: 40%;
   margin: auto;
   color: #ecf0f1;
   font-weight: bolder;
   font-size: 1.3em;
+}
+.new-user-form .btn-default {
+  width: 50%;
+  background-color: rgba(44, 62, 80,0.2);
+  color: #ecf0f1;
 }
 
 .jumbotron {
@@ -68,6 +77,13 @@ color: #ecf0f1;
 .navbar-brand{
   color: #ecf0f1;
 }
+.glyphicon{
+  color: #ecf0f1;
+  font-size: 2em;
+}
+.glyphicon:hover{
+  color: rgba(44, 62, 80,1);
+}
 .navbar-brand:hover{
   color: rgba(44, 62, 80,1);
   background-color: #ecf0f1;
@@ -82,8 +98,21 @@ color: #ecf0f1;
   /*opacity: 1;*/
 }
 
+
 @media only screen and (max-width: 479px) {.jumbotron h1 {font-size: 100px;}}
 @media only screen and (max-width: 640px) {.jumbotron h1 {font-size: 90px;}}
 @media only screen and (max-width: 480px) {.jumbotron h1 {font-size: 60px;}}
 @media only screen and (max-width: 375px) {.jumbotron h1 {font-size: 50px;}}
+
+.guide-text {
+  color: #ecf0f1;
+  text-align: center;
+}
+.user_image {
+  padding: 12px;
+  width: 250px;
+  height: 250px;
+  border:1px solid white;
+  background-color: white;
+
 }
