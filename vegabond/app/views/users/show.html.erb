@@ -1,9 +1,19 @@
-
-<div class=".col-md-4 col-md-offset-2">
-
-  <div class="user_image">
-    <%= image_tag @user.avatar.url (:medium)%>
+<div class="cover-image">
+  <div class="cover">
+    <!-- <p class="profile-edit"><%= link_to "<span class='glyphicon glyphicon-pencil'></span>"
+    .html_safe, edit_user_path(current_user) %></p> -->
+    <div class="user_image">
+      <%= image_tag @user.avatar.url (:medium)%>
+    </div>
+    <div class="profile-info profile-show">
+      <h1> <%= @user.first_name %> </h1>
+      <h5><%= @user.current_city %> </h5>
+      <p>Join date: <%= @user.created_at.strftime("%m/%d/%Y") %>
+        <%= link_to "Edit user information", edit_user_path(current_user) %>
+      </p>
+    </div>
   </div>
+
 
 
 <h1 class="profile-show" > <%= @user.first_name %> </h1>
@@ -13,16 +23,12 @@
 
   <p class="profile-show">Join date: <%= @user.created_at.strftime("%m/%d/%Y") %> </p>
 
-
-  <ul>
-
+<div class=".col-md-4 col-md-offset-2">
+  <ul class="profile-content">
       <% @posts.each do |post| %>
-        <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, post_path(post) %></h3>
+        <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, city_post_path([1],post) %></h3>
         <h5 class="profile-show"><strong>Author:</strong><%= post.author %></h5>
         <p class="profile-show"><strong>Content:</strong><%= post.story %></p>
       <% end %>
-
   </ul>
-
-
 </div>

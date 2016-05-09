@@ -2,47 +2,57 @@ class PostsController < ApplicationController
 
   before_action :logged_in?, only: [:show]
 
+  def index
+  end
+
   def new
     @post = Post.new
-    render :new
+    city_id = params[:city_id]
+    @city = City.find_by(id: city_id)
+    @full_background = true
   end
 
   def create
-    user = User.find_by_id(current_user)
-    # city = City.find_by_id(params[:id])
+    city = City.find(params[:city_id])
+    user = current_user[:id]
     new_post = Post.new(post_params)
-    new_post.user_id = current_user.id
+    new_post.user_id = user
 
     if new_post.save
-      user.posts << new_post
-      redirect_to user_path(user)
+      city.posts << new_post
+      redirect_to city_path(city)
     else
-      redirect_to new_post_path
+      redirect_to new_city_post_path(user)
     end
   end
 
   def show
     @post = Post.find_by_id(params[:id])
-    # @city = City.find_by_id(params[:id])
-    render :show
+    @city = City.find_by_id(params[:city_id])
   end
 
   def edit
     @post = Post.find_by_id(params[:id])
+    @city = City.find_by_id(params[:city_id])
   end
 
   def update
-    @post = Post.find_by_id(params[:id])
-    @post.update_attributes(post_params)
-
-    redirect_to @post
+    city = City.find(params[:city_id])
+    user_id = current_user[:id]
+    post = Post.find_by_id(params[:id])
+    post[:user_id] = user_id
+    if post.update(post_params)
+      redirect_to city_path(city)
+    else
+      redirect_to edit_post_path
+    end
   end
 
   def destroy
-    @post = Post.find_by_id(params[:id])
-
-    @post.destroy
-    redirect_to current_user
+    post = Post.find_by_id(params[:id])
+    post.destroy
+    city = City.find_by_id(params[:city_id])
+    redirect_to city_path(city)
 
   end
 

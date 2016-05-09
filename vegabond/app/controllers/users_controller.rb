@@ -5,28 +5,30 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @full_background = true
   end
 
   def new
     @user = User.new
-    render :new
+    @full_background = true
   end
 
   def create
     @user = User.create(user_params)
     login(@user)
     redirect_to @user
+
   end
 
   def show
     @user = User.find_by_id(current_user)
-    @city = City.find_by_id(params[:id])
     @posts = @user.posts
-    render :show
+    @full_background = false
   end
 
   def edit
     @user = User.find_by_id(params[:id])
+    @full_background = true
   end
 
   def update
@@ -42,6 +44,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
   end
+
 
   private
 
