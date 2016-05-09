@@ -4,18 +4,29 @@
  *= require_tree .
  */
 
-body {
+.homepage {
   background: url("background.jpeg") no-repeat center center fixed;
 
-  -webkit-background-size: 100% auto;
+  -webkit-background-size: cover;
 
-  -moz-background-size: 100% auto;
+  -moz-background-size: cover;
 
-  -ms-background-size: 100% auto;
+  -ms-background-size: cover;
 
-  -o-background-size: 100% auto;
+  -o-background-size: cover;
 
-  background-size: 100% auto;
+  background-size: cover;
+}
+.page {
+  background: url("background.jpeg") no-repeat center center fixed;
+  background-size: 100% 350px;
+  background-position: top;
+
+}
+.profile-info{
+  text-align: center;
+  top: -300px;
+
 }
 .alert-info {
 background-color: rgba(44, 62, 80,0.2);
