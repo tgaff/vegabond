@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :logged_in?, only: [:new, :delete]
+  before_action :logged_in?, only: [:new, :delete, :edit]
 
   def index
   end
@@ -32,25 +32,24 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if logged_in? == nil
-      flash[:alert]  = "You must be logged in to edit posts"
-    else
       @post = Post.find_by_id(params[:id])
       @city = City.find_by_id(params[:city_id])
-    end
   end
 
   def update
-    city = City.find(params[:city_id])
-    user_id = current_user[:id]
-    post = Post.find_by_id(params[:id])
-    post[:user_id] = user_id
-    if user_id == post[:user_id]
-      post.update(post_params)
-      redirect_to city_path(city)
+    @city = City.find(params[:city_id])
+    @post = Post.find_by_id(params[:id])
+    # @post[:user_id] = current_user[:id]
+    if current_user.id == @post[:user_id]
+      if @post.update(post_params)
+        redirect_to city_path(@city)
+      else
+        redirect_to edit_post_path
+      end
+
     else
-      flash.now[:notice] = "You can not edit other user posts"
-      redirect_to edit_post_path
+      flash[:notice] = "You can not edit other user's posts"
+      redirect_to city_path(@city)
     end
   end
 
