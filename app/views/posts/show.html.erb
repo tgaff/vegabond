@@ -1,13 +1,16 @@
 <div class=".col-md-4 col-md-offset-2">
-
-  <div class="profile-show">
-    <h1><%= @post.title %></h1>
-     <br><br>
-    <p><%= @post.story%></p>
-    <p><strong><%= @post.author%></strong></p>
-  </div>
-  <% if current_user %>
-    <%= button_to "Delete", "/cities/#{@city.id}/posts/#{@post.id}",:class => "btn btn-danger", method: :delete %>
-  <% end %>
+  <div>
+    <%= link_to "New Post", new_city_post_path(@city), :method => :get, :class => "newpost" %>
+    <% @postshow.each do |post| %>
+    <ul class="profile-content">
+      <h1><%= post.title %></h1>
+       <br><br>
+      <p><%= post.story%></p>
+      <p><strong><%= post.author%></strong></p>
+      <%= link_to "Delete", "/cities/#{@city.id}/posts/#{post.id}",:class => "delete", method: :delete, data: { confirm: "Are you sure?"} %> <br>
+      <%= link_to "Edit", edit_city_post_path(@city[:id], post[:id]), method: :get, :class => "edit" %>
+    </ul>
+    </div>
+    <% end %>
 
 </div>

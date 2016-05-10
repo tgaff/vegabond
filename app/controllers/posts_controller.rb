@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   before_action :logged_in?, only: [:new, :delete, :edit]
 
+
   def index
   end
 
@@ -31,6 +32,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_id(params[:id])
     @city = City.find_by_id(params[:city_id])
+    @postshow = @city.posts
     if @city[:id] == 1
       @cityclass = "sanfrancisco"
     elsif @city[:id] == 2
@@ -43,8 +45,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-      @post = Post.find_by_id(params[:id])
-      @city = City.find_by_id(params[:city_id])
+    @post = Post.find_by_id(params[:id])
+    @city = City.find_by_id(params[:city_id])
+    @cityclass = "page"
   end
 
   def update
