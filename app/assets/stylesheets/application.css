@@ -5,7 +5,7 @@
  */
 
 .homepage {
-  background: url("background.jpeg") no-repeat center center fixed;
+  background: url("background_mini_mini.jpeg") no-repeat center center fixed;
 
   -webkit-background-size: cover;
 
@@ -16,11 +16,25 @@
   -o-background-size: cover;
 
   background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 .page {
-  background: url("background.jpeg") no-repeat center center fixed;
-  background-size: 100% 350px;
-  background-position: top;
+  background: url("background_mini_mini.jpeg") no-repeat center;
+  -webkit-background-size: 100%;
+
+  -moz-background-size: 100%;
+
+  -ms-background-size: 100%;
+
+  -o-background-size: 100%;
+
+  background-size: 100%;
+
+
 }
 
 .profile-info{
@@ -30,6 +44,8 @@
   left: 20%;
   top: 10%;
   color: #ecf0f1;
+  background-color: white
+  opacity:
 
 }
 .alert-info {
@@ -49,9 +65,12 @@
 }
 
 .profile-content {
-  position: absolute;;
+  position: absolute;
   color: rgba(44, 62, 80,1);
   top: 44%;
+  font-size: 2em;
+  text-align: center;
+
 }
 .form-control {
   width: 50%;
@@ -123,15 +142,16 @@
   color: #ecf0f1;
   text-align: center;
 }
-.user_image {
+.image {
   position: relative;;
   padding: 12px;
-  width: 250px;
-  height: 250px;
-  border:1px solid white;
-  background-color: white;
-
+  width: 240px;
+  height: 268px;
+  left: 2%;
 }
+/*.img-circle {
+  right: -100px;
+}*/
 #city {
   color: rgba(44, 62, 80,1);
 }

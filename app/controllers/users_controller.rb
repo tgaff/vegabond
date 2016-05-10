@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       login(@user)
       redirect_to @user
     else
+      @full_background = true
       render :new
     end
   end

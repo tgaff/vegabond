@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
 
   #created by phill and adam
   def create
+    @full_background = true
     @user = User.confirm(user_params)
     if @user
       login(@user)
