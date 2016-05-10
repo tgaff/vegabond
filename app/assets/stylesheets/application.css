@@ -50,7 +50,7 @@ body,
   top: 10%;
   color: #ecf0f1;
   background-color: white
-  opacity:
+
 
 }
 .alert-info {
@@ -137,7 +137,7 @@ body,
 }
 .navbar-nav  li a:hover{
   color: rgba(44, 62, 80,1);
-  /*opacity: 1;*/
+  
 }
 
 
