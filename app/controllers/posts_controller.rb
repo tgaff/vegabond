@@ -44,7 +44,7 @@ class PostsController < ApplicationController
     if post.update(post_params)
       redirect_to city_path(city)
     else
-      redirect_to edit_post_path
+      redirect_to edit_city_post_path
     end
   end
 
@@ -52,8 +52,11 @@ class PostsController < ApplicationController
     post = Post.find_by_id(params[:id])
     post.destroy
     city = City.find_by_id(params[:city_id])
-    redirect_to city_path(city)
-
+    if request.referrer.include?('/user')
+      redirect_to current_user
+    else
+       redirect_to city_path(city)
+    end
   end
 
   def logged_in?

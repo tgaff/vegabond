@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get   "/logout", to: "sessions#destroy"
   post  "/sessions", to: "sessions#create"
 
+  delete "/posts/:id", to: "posts#destroy", as: "destroy_post"
+
+
+
   resources :cities do
     resources :posts
   end

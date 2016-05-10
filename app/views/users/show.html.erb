@@ -29,6 +29,8 @@
         <h3 class="profile-show"><strong>Title:</strong><%= link_to post.title, city_post_path([1],post) %></h3>
         <h5 class="profile-show"><strong>Author:</strong><%= post.author %></h5>
         <p class="profile-show"><strong>Content:</strong><%= post.story %></p>
+        <%= button_to "Delete", destroy_post_path(post.id), method: :delete %>
+        <%= link_to "Edit", edit_city_post_path(post.city, post) %>
       <% end %>
   </ul>
 </div>
