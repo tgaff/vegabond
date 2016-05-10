@@ -11,17 +11,15 @@
             <%= f.label :city %>
             <%= f.text_field :city, :class=> "form-control" %>
         </div>
+          <div class="">
+              <%= f.label :story %>
+              <%= f.text_area :story, :class=> "form-control" %>
+          </div>
 
-        <div class="">
-            <%= f.label :story %>
-            <%= f.text_area :story, :class=> "form-control" %>
-        </div>
-
-        <div class="">
-            <%= f.label :author %>
-            <%= f.text_field :author, :class=> "form-control" %><br>
-        </div>
-        <%= f.submit "Submit", :class=> "btn btn-default"  %>
+          <div class="">
+              <%= hidden_field :author, :value=> @user.first_name%><br>
+          </div>
+          <%= f.submit "Submit", :class=> "btn btn-default"  %>
       <% end %>
     </div>
   </div>

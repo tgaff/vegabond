@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @user = User.find_by_id(params[:id])
     @post = Post.new
     city_id = params[:city_id]
     @city = City.find_by(id: city_id)
@@ -48,8 +49,10 @@ class PostsController < ApplicationController
       end
 
     else
+
       flash[:notice] = "You can not edit other user's posts"
       redirect_to city_path(@city)
+
     end
   end
 
@@ -58,7 +61,11 @@ class PostsController < ApplicationController
     if current_user.id == post[:user_id]
       post.destroy
       city = City.find_by_id(params[:city_id])
-      redirect_to city_path(city)
+      if request.referrer.include?('/user')
+        redirect_to current_user
+      else
+        redirect_to city_path(city)
+      end
     else
       flash.now[:notice] = "You can not delete other user posts"
       redirect_to city_path(city)
