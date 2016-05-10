@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     city_id = params[:city_id]
     @city = City.find_by(id: city_id)
     @full_background = true
+
   end
 
   def create
@@ -30,6 +31,15 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by_id(params[:id])
     @city = City.find_by_id(params[:city_id])
+    if @city[:id] == 1
+      @cityclass = "sanfrancisco"
+    elsif @city[:id] == 2
+      @cityclass = "valdivia"
+    elsif @city[:id] == 3
+      @cityclass = "melbourne"
+    else
+      @cityclass = "istanbul"
+    end
   end
 
   def edit
