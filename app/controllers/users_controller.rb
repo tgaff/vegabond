@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     @posts = @user.posts
-    post = Post.find_by_id(params[:id])
+    # post = Post.find_by_id(params[:id])
     @full_background = false
   end
 

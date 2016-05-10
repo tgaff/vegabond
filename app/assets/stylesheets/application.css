@@ -9,7 +9,7 @@ body,
   height: 100%;
 }
 .homepage {
-  background: url("background_mini_mini.jpeg") no-repeat center center fixed;
+  background: url("http://i.imgur.com/T3cmMd1.jpg") no-repeat center center fixed;
 
   -webkit-background-size: cover;
 
@@ -25,7 +25,7 @@ body,
   min-height: 100%;
 }
 .page {
-  background: url("background_mini_mini.jpeg") no-repeat center;
+  background: url("http://i.imgur.com/T3cmMd1.jpg") no-repeat center;
   -webkit-background-size: 100%;
 
   -moz-background-size: 100%;
@@ -36,10 +36,12 @@ body,
 
   background-size: 100%;
 
-  height: 350px;
+  height: 380px;
 
 }
-
+.profile-show{
+  color: white;
+}
 .profile-info{
   position: fixed;
   text-align: left;
