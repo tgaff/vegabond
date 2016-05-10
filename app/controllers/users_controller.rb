@@ -29,6 +29,7 @@ class UsersController < ApplicationController
     @posts = @user.posts
     # post = Post.find_by_id(params[:id])
     @full_background = false
+    @cityclass = "page"
   end
 
   def edit

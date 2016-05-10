@@ -6,9 +6,6 @@
 html,
 body,
 
-body {
-  background-color: #ecf0f1;
-}
 .homepage {
   height: 100%;
 }
@@ -26,10 +23,26 @@ body {
   background-size: cover;
 
   min-width: 100%;
+
   min-height: 100%;
 }
 .page {
   background: url("http://i.imgur.com/T3cmMd1.jpg") no-repeat center;
+  -webkit-background-size: 100%;
+
+  -moz-background-size: 100%;
+
+  -ms-background-size: 100%;
+
+  -o-background-size: 100%;
+
+  background-size: 100%;
+
+  height: 380px;
+
+}
+.sanfrancisco {
+  background: url("sf.jpeg") no-repeat center;
   -webkit-background-size: 100%;
 
   -moz-background-size: 100%;
@@ -116,7 +129,7 @@ body {
 
 .navbar {
   /*background-color: rgb(102, 96, 102);*/
-  background-color: rgba(44, 62, 80,0.2);
+  background-color: rgba(44, 62, 80,0.5);
   color: #ecf0f1;
 }
 .navbar-brand{
