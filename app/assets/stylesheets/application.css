@@ -5,6 +5,10 @@
  */
 html,
 body,
+
+body {
+  background-color: #ecf0f1;
+}
 .homepage {
   height: 100%;
 }
@@ -40,7 +44,7 @@ body,
 
 }
 .profile-show{
-  color: white;
+  color: #ecf0f1;
 }
 .profile-info{
   position: fixed;
@@ -49,9 +53,13 @@ body,
   left: 20%;
   top: 10%;
   color: #ecf0f1;
-  background-color: white
-  opacity:
-
+}
+.delete {
+  float: right;
+  border-style: none;
+  color: red;
+  background-color: #ecf0f1;
+  font-size: 0.6em;
 }
 .alert-info {
   background-color: rgba(44, 62, 80,0.2);
@@ -72,10 +80,8 @@ body,
 .profile-content {
   position: absolute;
   color: rgba(44, 62, 80,1);
-  top: 44%;
+  top: 48%;
   font-size: 2em;
-  text-align: center;
-
 }
 .form-control {
   width: 50%;
