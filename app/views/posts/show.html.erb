@@ -6,7 +6,8 @@
     <p><%= @post.story%></p>
     <p><strong><%= @post.author%></strong></p>
   </div>
-  <%= button_to "Delete", "/cities/#{@city.id}/posts/#{@post.id}",:class => "btn btn-danger", method: :delete %>
-
+  <% if current_user %>
+    <%= button_to "Delete", "/cities/#{@city.id}/posts/#{@post.id}",:class => "btn btn-danger", method: :delete %>
+  <% end %>
 
 </div>
