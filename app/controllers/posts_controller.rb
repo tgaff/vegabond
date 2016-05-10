@@ -48,33 +48,26 @@ class PostsController < ApplicationController
       end
 
     else
-<<<<<<< HEAD
-      redirect_to edit_city_post_path
-=======
+
       flash[:notice] = "You can not edit other user's posts"
       redirect_to city_path(@city)
->>>>>>> f276f4484cb0b5e41ecb4984cde98affd518627f
+
     end
   end
 
   def destroy
     post = Post.find_by_id(params[:id])
-<<<<<<< HEAD
-    post.destroy
-    city = City.find_by_id(params[:city_id])
-    if request.referrer.include?('/user')
-      redirect_to current_user
-    else
-       redirect_to city_path(city)
-=======
     if current_user.id == post[:user_id]
       post.destroy
       city = City.find_by_id(params[:city_id])
-      redirect_to city_path(city)
+      if request.referrer.include?('/user')
+        redirect_to current_user
+      else
+        redirect_to city_path(city)
+      end
     else
       flash.now[:notice] = "You can not delete other user posts"
       redirect_to city_path(city)
->>>>>>> f276f4484cb0b5e41ecb4984cde98affd518627f
     end
   end
 
