@@ -13,18 +13,7 @@
       <ul class="nav navbar-nav navbar-right">
        <% if current_user %>
          <!-- <li><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_user_path(current_user) %></li> -->
-         <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Cities
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a class="dropdown-item" id="city" href="/cities/1">San Francisco</a></li>
-    <li><a class="dropdown-item" id="city" href="/cities/2">Valdivia</a></li>
-    <li><a class="dropdown-item" id="city" href="/cities/3">Melbourne</a></li>
-    <li><a class="dropdown-item" id="city" href="/cities/4">Istanbul</a></li>
-  </ul>
-</div>
+
          <!-- <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cities</a>
           <div class="dropdown-menu">
@@ -34,6 +23,20 @@
             <a class="dropdown-item" id="city" href="#">Istanbul</a>
           </div> -->
            <li class="nav-item nav-link active"><%= link_to "Profile", user_path(current_user) %></li>
+           <li>
+             <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Cities
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a class="dropdown-item" id="city" href="/cities/1">San Francisco</a></li>
+                <li><a class="dropdown-item" id="city" href="/cities/2">Valdivia</a></li>
+                <li><a class="dropdown-item" id="city" href="/cities/3">Melbourne</a></li>
+                <li><a class="dropdown-item" id="city" href="/cities/4">Istanbul</a></li>
+              </ul>
+            </div>
+          </li>
            <li><%= link_to "Log Out", logout_path %></li>
         <% else %>
           <li class="nav-item nav-link active"><%= link_to "Create Account", new_user_path %></li>
