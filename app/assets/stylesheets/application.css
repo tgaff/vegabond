@@ -50,8 +50,6 @@ body,
   top: 10%;
   color: #ecf0f1;
   background-color: white
-
-
 }
 .alert-info {
   background-color: rgba(44, 62, 80,0.2);
@@ -126,7 +124,6 @@ body,
 .navbar-brand:hover{
   color: rgba(44, 62, 80,1);
   background-color: #ecf0f1;
-  /*opacity: 1;*/
 }
 .navbar-nav li a {
   color: #ecf0f1;
@@ -137,7 +134,7 @@ body,
 }
 .navbar-nav  li a:hover{
   color: rgba(44, 62, 80,1);
-  
+
 }
 
 
@@ -157,9 +154,7 @@ body,
   height: 268px;
   left: 2%;
 }
-/*.img-circle {
-  right: -100px;
-}*/
+
 #city {
   color: rgba(44, 62, 80,1);
 }
