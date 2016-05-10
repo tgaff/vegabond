@@ -19,7 +19,7 @@ ___
 * Sprint 3: The user will be able to visit city pages for "Melbourne", "Valdivia", and "Istanbul". A user can create new posts to these city pages. Some validation and authorization has been incorporated so that a user cannot sign up with an email that is already in use. Posts must be between 1 and 200 characters. And a post's story must be between 1 and 300 characters. Also a user must be logged in to create, update, or delete users or posts. Only a user can edit or delete posts and edit their own profile.
 ​
 ​
-## **Technologies Used**
+## **Technologies Used**:
 ___
 * ruby
 * rails
@@ -29,7 +29,7 @@ ___
 ​
 ​
 ​
-## **Existing Features**
+## **Existing Features**:
 ___
 * Sign up
 * Log in
@@ -40,7 +40,7 @@ ___
 ​
 ​
 ​
-## **Planned Features**
+## **Planned Features**:
 ___
 * Upload avatar picture
 * Leave comments on existing posts
