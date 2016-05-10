@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     @posts = @user.posts
     # post = Post.find_by_id(params[:id])
-    @full_background = false
+    @full_background = true
   end
 
   def edit
@@ -47,6 +47,7 @@ class UsersController < ApplicationController
     if session[:user_id] == nil
       flash[:notice] = "Must be logged in to see this page"
       redirect_to root_path
+      
     end
   end
 

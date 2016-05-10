@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   #created by phill and adam
   def new
     @user = User.new
-    render :new
+    @full_background = true
   end
 
   #created by phill and adam
