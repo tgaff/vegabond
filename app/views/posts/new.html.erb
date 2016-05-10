@@ -16,9 +16,7 @@
               <%= f.text_area :story, :class=> "form-control" %>
           </div>
 
-          <div class="">
-              <%= hidden_field :author, :value=> @user.first_name%><br>
-          </div>
+          
           <%= f.submit "Submit", :class=> "btn btn-default"  %>
       <% end %>
     </div>
