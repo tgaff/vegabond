@@ -141,7 +141,7 @@ body,
   font-size: 1.2em;
 }
 .alert-info {
-  background-color: rgba(44, 62, 80,0.2);
+  background-color: rgba(44, 62, 80,0.5);
   border-style: hidden;
   color: #ecf0f1;
   float: right;

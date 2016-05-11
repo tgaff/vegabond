@@ -20,12 +20,16 @@ class PostsController < ApplicationController
     user = current_user[:id]
     new_post = Post.new(post_params)
     new_post.user_id = user
-
-    if new_post.save
-      city.posts << new_post
-      redirect_to city_path(city)
+    if current_user
+      if new_post.save
+        city.posts << new_post
+        redirect_to city_path(city)
+      else
+        render :new
+      end
     else
-      render :new
+      flash[:notice] = "You must be logged in to post"
+      redirect_to "/"
     end
   end
 
@@ -48,6 +52,7 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(params[:id])
     @city = City.find_by_id(params[:city_id])
     @cityclass = "page"
+    @full_background = "true"
   end
 
   def update

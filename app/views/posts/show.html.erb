@@ -7,8 +7,10 @@
        <br>
       <p><%= @post.story%></p>
       <p><strong><%= @post.author%></strong></p>
+    <% if current_user[:id] == @post[:user_id] %>
       <%= link_to "Delete", "/cities/#{@city.id}/posts/#{@post.id}",:class => "delete", method: :delete, data: { confirm: "Are you sure?"} %> <br>
       <%= link_to "Edit", edit_city_post_path(@city[:id], @post[:id]), method: :get, :class => "edit" %>
+    <% end %>
     </ul>
     </div>
 

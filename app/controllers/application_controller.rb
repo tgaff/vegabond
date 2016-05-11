@@ -5,4 +5,6 @@ class ApplicationController < ActionController::Base
 
   # added by phill and adam
   include SessionsHelper
+
+  
 end

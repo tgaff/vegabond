@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  
+
 
   def show
     @user = User.find_by_id(params[:id])
@@ -14,6 +14,8 @@ class CitiesController < ApplicationController
     else
       @cityclass = "istanbul"
     end
+    @cityname = "SF"
+    gon.cityname = @cityname
   end
 
 end

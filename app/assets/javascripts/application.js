@@ -7,4 +7,5 @@
 
 $(window).mouseover(function() {
   $(".alert-info").delay(2000).fadeOut(300);
+  console.log(gon.cityname);
 });
